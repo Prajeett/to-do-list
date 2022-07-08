@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+::selection{
+
+    background-color:#DD4124;
+    color: white;
+    
+}
+
+
+
+body{
+    background: linear-gradient(135deg, orange 60%, rgb(242, 149, 36));
+}
+
+
+.container{
+    max-width: 500px;
+    background-color: rgb(225, 233, 240);
+    border-radius: 10px;
+    padding: 30px 0px 20px 0px;
+    margin: 250px auto; 
+
+}
+
+#textbox{
+    
+
+    border: 1px solid rgb(173, 103, 103);
+    height: 60px;
+    width: 360px;
+    border-radius: 10px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 8px;
+
+}
+
+.add_button{
+    height: 35px;
+    width: 50px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgb(163, 151, 174) 60%, rgb(183, 138, 83));
+    cursor: pointer;
+
+}
+
+.add_button:active{
+transform: scale(0.8);
+}
+
+.input_task{
+    padding-bottom: 25px;
+    margin-left: 45px;
+    margin-bottom: 15px;
+}
+
+
+
+.filters{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 0px 19px 20px 19px;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+.filters span:hover{
+    background-color:#DD4124;
+    color: white;
+}
+
+.clear_button{
+    font-weight: bolder;
+    background: linear-gradient(135deg, rgb(163, 151, 174) 60%, rgb(183, 138, 83));
+    border-radius: 6px;
+    height: 27px;
+    margin-left: 35px;
+    cursor: pointer;
+
+
+
+}
+.clear_button:active{
+    transform: scale(0.78);
+    opacity: 0.8;
+}
+
+#add_list{
+margin-left: 40px;
+}

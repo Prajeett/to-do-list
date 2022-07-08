@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="icon"
+      href="https://images.unsplash.com/photo-1603899122361-e99b4f6fecf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="input_task">
+        <input
+          type="text"
+          placeholder="Add a new task"
+          id="textbox" 
+        /> 
+
+        <button onclick ="add_todo()" class="add_button">Add</button>
+      </div>
+
+      <div class="controls">
+        <div class="filters">
+          <span> Your To-Do List for today </span>
+
+          <button onclick="clear_button()" class="clear_button">Clear All</button>
+        </div>
+      </div>
+
+      <div id="add_list">
+     
+      </div>
+    </div>
+  </body>
+
+
+  <script type="text/javascript">
+
+    function add_todo(){
+
+    var textbox = 0, add_list = 0;
+    
+    textbox = (document.getElementById("textbox").value);
+    console.log(textbox);
+    add_list = textbox;
+    console.log(add_list);
+    
+    document.getElementById("add_list").innerHTML+= "<li>" +  add_list + "</li>"; 
+
+
+
+    }
+
+
+
+
+    
+    function clear_button(){
+    var add_list=0;
+    add_list = (document.getElementById("add_list").value);
+    add_list = ""
+    document.getElementById("add_list").innerHTML = add_list;
+    }
+
+    </script>
+
+</html>
