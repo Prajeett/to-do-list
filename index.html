@@ -19,7 +19,7 @@
         <input
           type="text"
           placeholder="Add a new task"
-          id="textbox" 
+          id="textbox" onfocus="if (this.value == 'Your email') {this.value=''}"
         /> 
 
         <button onclick ="add_todo()" class="add_button">Add</button>
