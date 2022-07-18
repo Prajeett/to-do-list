@@ -103,15 +103,23 @@ margin-left: 40px;
     justify-content: center;
     margin: 10px;
 
+
 }
 
 .add_button{
     margin-top: 15px;
-}
 
+}
+.add_button p {
+    color: black;
+}
 .clear_button{
     height: 30px;
     font-size: 10px;
+    
+}
+.clear_button p {
+    color: black;
 }
 
 #textbox{
