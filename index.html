@@ -11,6 +11,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
+
   </head>
 
   <body>
@@ -19,17 +20,17 @@
         <input
           type="text"
           placeholder="Add a new task"
-          id="textbox" onfocus="if (this.value == 'Your email') {this.value=''}"
+          id="textbox" 
         /> 
 
-        <button onclick ="add_todo()" class="add_button">Add</button>
+        <button onclick ="add_todo()" class="add_button" id="addButton">Add</button>
       </div>
 
       <div class="controls">
         <div class="filters">
           <span> Your To-Do List for today </span>
 
-          <button onclick="clear_button()" class="clear_button">Clear All</button>
+          <button onclick="clear_button()" class="clear_button" id="clearButton" >Clear All</button>
         </div>
       </div>
 
@@ -42,16 +43,28 @@
 
   <script type="text/javascript">
 
+        var input = document.getElementById("textbox");
+      input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("addButton").click();
+  }
+});
+        
+
+
     function add_todo(){
 
-    var textbox = 0, add_list = 0;
+    let textbox = 0, add_list = 0;
     
     textbox = (document.getElementById("textbox").value);
     console.log(textbox);
     add_list = textbox;
     console.log(add_list);
-    
+
+
     document.getElementById("add_list").innerHTML+= "<li>" +  add_list + "</li>"; 
+    document.getElementById("textbox").value = "";
 
 
 
